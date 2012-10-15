@@ -1,0 +1,25 @@
+!!! XHTML 5
+
+%head= render 'layouts/header'
+
+.layout
+  .application
+    .left-column
+      .content= render 'layouts/menu'
+
+    .main-column
+      .content
+        .container
+          .title
+            %h3= @post.title
+            = link_to @post.category, "/category/#{@post.category}"
+          .info
+            .picture= image_tag @post.picture.url(:medium)
+            .post= simple_format(@post.text)
+            .post= link_to 'изменить', "/post/#{@post.id}/edit"
+
+  .footer
+    .slogan justahint
+    .copyright &copy; Hichdima 2012
+    .strange-beast
+    .silhouette-excavator

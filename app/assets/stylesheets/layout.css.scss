@@ -1,0 +1,212 @@
+// Place all the styles related to the layout controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font: 16px/19px 'Open Sans';
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.application {
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  color: #666;
+  position: relative;
+
+  a {
+    color: #999;
+    text-shadow: #7d7bc3 1px 1px 90px;
+    text-decoration: none;
+
+    &:hover {
+      color: #343434;
+      text-shadow: #ffde00 1px 1px 60px;
+    }
+  }
+}
+
+.left-column {
+  width: 200px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  float: left;
+
+  .content {
+    width: 180px;
+    margin: 4px auto 0;
+    padding-top: 30px;
+    position: fixed;
+    border-top: 3px solid #000;
+
+    .nav {
+      padding: 30px 0 50px;
+      border-top: 1px dotted #ececec;
+      color: #999;
+
+      li {
+        padding: 10px 0 0 8px;
+      }
+    }
+
+    .logo {
+      margin-top: 30px;
+    }
+  }
+}
+
+.main-column {
+  width: 600px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  float: left;
+
+  .content {
+    width: 680px;
+    margin: 4px auto 0;
+    padding-top: 91px;
+    border-top: 3px solid #000;
+
+    .container {
+      margin-top: 33px;
+      padding: 30px 0 120px;
+      border-top: 1px dotted #ececec;
+
+      .title {
+        line-height: 163%;
+      }
+
+      h3 {
+        margin-top: -81px;
+        font-size: 148%;
+        font-weight: 300;
+        font-family: 'Open Sans';
+
+        a {
+          color: #666;
+          text-decoration: none;
+        }
+      }
+
+      .info {
+        margin: 20px 5px;
+      }
+    }
+
+    .container {
+
+      .post {
+        margin: 6px 0;
+
+        h4 {
+          margin: 15px 0;
+          font-size: 125%;
+          font-weight: 300;
+        }
+
+        p {
+          margin: 15px 0;
+        }
+      }
+    }
+
+    .container {
+
+      .text-field {
+        margin: 25px 0;
+
+        input[type="text"] {
+          height: 25px;
+          width: 400px;
+          padding: 7px;
+          font-size: 100%;
+          font-weight: 300;
+          font-family: 'Open Sans';
+        }
+
+        textarea {
+          height: 325px;
+          width: 400px;
+          padding: 7px;
+          font-size: 100%;
+          font-weight: 300;
+          font-family: 'Open Sans';
+          resize: none;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 18px;
+  clear: both;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: 71%;
+  background: #424242;
+  color: #fff;
+
+  &:hover {
+    box-shadow: #fdff4f 1px 1px 230px;;
+  }
+
+  div {
+    margin: 0 5px;
+  }
+
+  .slogan {
+    float: left;
+  }
+
+  .copyright {
+    float: right;
+  }
+
+  .strange-beast {
+    width: 73px;
+    height: 73px;
+    position: absolute;
+    top: -73px;
+    left: 72px;
+    background: url('beast.png');
+  }
+
+  .silhouette-excavator {
+    width: 120px;
+    height: 128px;
+    position: absolute;
+    top: -128px;
+    right: 153px;
+    background: url('silhouette_excavator.png');
+  }
+}

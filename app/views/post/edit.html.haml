@@ -1,0 +1,32 @@
+!!! XHTML 5
+
+%head= render 'layouts/header'
+
+.layout
+  .application
+    .left-column
+      .content= render 'layouts/menu'
+
+    .main-column
+      .content
+        .container
+          .title
+            %h3= @post.title
+            = link_to 'отредактируй меня полностью', 'javascript:void(0)'
+          .info
+            .post
+              = form_for :post, :method => :put, :url => {:action => :edit}, :html => { :multipart => true } do |f|
+                .text-field
+                  = f.text_field :title, :placeholder => 'О чём пишем?'
+                .text-field
+                  = f.text_area :text, :class => 'tinymce', :placeholder => 'Писать сюда'
+                .text-field
+                  = f.file_field :picture
+                %p
+                  = f.select :category, :rails => :rails, :html => :'html', :javascript => :javascript, :design => :design, :typography => :typography
+                  = f.submit :'Готово'
+
+  .footer
+    .slogan justahint
+    .strange-beast
+    .silhouette-excavator

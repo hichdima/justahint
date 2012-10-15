@@ -1,0 +1,11 @@
+- if defined? title
+  %title= "#{title} - Just a hint"
+- else
+  %title Just a hint
+
+%link{:rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Poiret+One'}
+%link{:rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Oranienbaum'}
+%link{:rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,cyrillic,cyrillic-ext'}
+
+= stylesheet_link_tag 'layout.css'
+= javascript_include_tag 'application.js'

@@ -1,0 +1,25 @@
+!!! XHTML 5
+
+%head= render 'layouts/header'
+
+.layout
+  .application
+    .left-column
+      .content= render 'layouts/menu'
+
+    .main-column
+      .content
+        - @post.each do |p|
+          .container
+            .title
+              %h3= link_to p.title, "/post/#{p.id}"
+              = link_to p.category, "category/#{p.category}"
+            .info
+              .picture= image_tag p.picture.url(:medium)
+
+
+  .footer
+    .slogan justahint
+    .copyright &copy; Hichdima 2012
+    .strange-beast
+    .silhouette-excavator
